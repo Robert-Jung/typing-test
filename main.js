@@ -12,3 +12,6 @@ for (var i = 0; i <= myArray.length; i++) {
   $span.textContent = myArray[i]
   document.body.appendChild($span)
 }
+
+var $firstLetter = document.querySelector('span')
+$firstLetter.classList.add('current')
