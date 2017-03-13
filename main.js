@@ -13,17 +13,17 @@ for (var i = 0; i <= myArray.length; i++) {
   document.body.appendChild($span)
 }
 
-var $firstLetter = document.querySelector('span')
-$firstLetter.classList.add('current')
+var $currentLetter = document.querySelector('span')
+$currentLetter.classList.add('current')
 
 document.body.addEventListener('keypress', function(event) {
   var keyEntered = event.key
-    if ($firstLetter.textContent === keyEntered) {
-      $firstLetter.classList.remove('incorrect','current')
-      $firstLetter.classList.add('correct')
-      $firstLetter = $firstLetter.nextElementSibling
-      $firstLetter.classList.add('current')
+    if ($currentLetter.textContent === keyEntered) {
+      $currentLetter.classList.remove('incorrect','current')
+      $currentLetter.classList.add('correct')
+      $currentLetter = $currentLetter.nextElementSibling
+      $currentLetter.classList.add('current')
     } else {
-      $firstLetter.classList.add('incorrect')
+      $currentLetter.classList.add('incorrect')
   }
 })
