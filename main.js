@@ -19,6 +19,9 @@ $currentLetter.classList.add('current')
 
 var totalError = []
 
+var $scoreboard = document.createElement('p')
+document.body.appendChild($scoreboard)
+
 var keyHandler = function (event) {
   var keyEntered = event.key
     if ($currentLetter.textContent === keyEntered) {
@@ -29,7 +32,7 @@ var keyHandler = function (event) {
     } else {
       var err = totalError.push(event.key)
       $currentLetter.classList.add('incorrect')
-      console.log(err)
+      $scoreboard.textContent = ('You have made ' + totalError.length + ' errors so far')
   }
 }
 
