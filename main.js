@@ -17,6 +17,8 @@ for (var i = 0; i <= myArray.length; i++) {
 var $currentLetter = document.querySelector('span')
 $currentLetter.classList.add('current')
 
+var totalError = []
+
 var keyHandler = function (event) {
   var keyEntered = event.key
     if ($currentLetter.textContent === keyEntered) {
@@ -25,7 +27,9 @@ var keyHandler = function (event) {
       $currentLetter = $currentLetter.nextElementSibling
       $currentLetter.classList.add('current')
     } else {
+      var err = totalError.push(event.key)
       $currentLetter.classList.add('incorrect')
+      console.log(err)
   }
 }
 
