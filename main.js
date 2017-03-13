@@ -10,13 +10,14 @@ var myArray = splitString(letters)
 for (var i = 0; i <= myArray.length; i++) {
   var $span = document.createElement('span')
   $span.textContent = myArray[i]
+  $span.classList.add('font')
   document.body.appendChild($span)
 }
 
 var $currentLetter = document.querySelector('span')
 $currentLetter.classList.add('current')
 
-document.body.addEventListener('keypress', function(event) {
+var keyHandler = function (event) {
   var keyEntered = event.key
     if ($currentLetter.textContent === keyEntered) {
       $currentLetter.classList.remove('incorrect','current')
@@ -26,4 +27,6 @@ document.body.addEventListener('keypress', function(event) {
     } else {
       $currentLetter.classList.add('incorrect')
   }
-})
+}
+
+document.body.addEventListener('keypress', keyHandler)
