@@ -9,3 +9,8 @@
 .incorrect {
   color: red;
 }
+
+.font {
+  font-family: helvetica, sans-serif;
+  font-size: 50px;
+}
