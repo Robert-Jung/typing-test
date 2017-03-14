@@ -31,7 +31,7 @@ var keyHandler = function (event) {
         if ($currentLetter.nextElementSibling != undefined) {
           $currentLetter.classList.add('current')
         } else {
-            $scoreboard.textContent = ('You have made ' + errors + ' errors')
+          $scoreboard.textContent = ('You have made ' + errors + ' errors')
         }
     } else {
       $currentLetter.classList.add('incorrect')
